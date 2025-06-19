@@ -191,6 +191,27 @@
           font-size: 30px; z-index: 1000; text-decoration: none;">
   ☎
 </a>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.style.color = "#000"; // reset
+      if (link.getAttribute("href").includes(current)) {
+        link.style.color = "#007BFF"; // highlight active
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
