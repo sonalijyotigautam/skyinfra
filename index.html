@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKYINFRA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services-container,
+    .recruit-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .service-box, .recruit-box {
+      width: 250px;
+      background-color: #eeeeee;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .recruit-box {
+      background-color: #004080;
+      color: white;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .service-box,
+      .recruit-box {
+        width: 90% !important;
+        margin: 10px auto !important;
+      }
+
+      footer {
+        padding: 20px;
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div><strong>MyLogo</strong></div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Welcome to SKYINFRA</h1>
+  </div>
+
+  <section id="about" style="background-color: #f9f9f9;">
+    <h2>About Us</h2>
+    <p>We are a company that delivers hope into the future! Just like elevators move people up, we help people and businesses grow.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service-box">
+        <h3>WINDOWS</h3>
+        <p>We keep elevators running smoothly and safely.</p>
+      </div>
+      <div class="service-box">
+        <h3>FACADE</h3>
+        <p>We install elevators with the latest safety technology.</p>
+      </div>
+      <div class="service-box">
+        <h3>RAILINGS AND BALCONY</h3>
+        <p>We upgrade old elevators to new, smart systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #001f3f; color: white;">
+    <h2>Join Our Team</h2>
+    <p>At our company, we believe in working together to lift people and communities upward. Join us and make a real impact through your work!</p>
+    <div class="recruit-container">
+      <div class="recruit-box"><h4>Open Roles</h4><p>See what jobs we are hiring for!</p></div>
+      <div class="recruit-box"><h4>Apply Now</h4><p>Fill out our quick application form.</p></div>
+      <div class="recruit-box"><h4>Success Stories</h4><p>See how our team members have grown with us.</p></div>
+      <div class="recruit-box"><h4>Why Work Here</h4><p>Find out what makes us awesome!</p></div>
+    </div>
+  </section>
+
+  <section style="background-color: #f4f4f4;">
+    <h2>Latest News</h2>
+    <ul style="list-style: none; padding: 0; margin-top: 30px;">
+      <li style="margin-bottom: 10px;"><strong>2025.06.01</strong> - We’ve launched our brand-new website!</li>
+      <li style="margin-bottom: 10px;"><strong>2025.05.20</strong> - Opened applications for elevator technician roles.</li>
+      <li style="margin-bottom: 10px;"><strong>2025.05.01</strong> - Celebrated 5 years of successful service!</li>
+    </ul>
+  </section>
+
+  <section id="contact" style="background-color: #e0f7fa;">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mjkryznv" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px;"></textarea><br><br>
+
+      <button type="submit" style="background-color: #00796b; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Elevator Company. All rights reserved.</p>
+    <p>123 Dream Tower, Future City, India | Phone: +91-9876543210 | Email: hello@myelevator.com</p>
+  </footer>
+
+</body>
+</html>
