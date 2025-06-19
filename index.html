@@ -482,6 +482,41 @@
 ">
   &#x2709;
 </a>
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="topBtn" title="Go to top" style="
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+">
+  ↑
+</button>
+
+<script>
+  // Show button when scrolled down
+  let mybutton = document.getElementById("topBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  };
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 
 </body>
 </html>
